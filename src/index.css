@@ -1,5 +1,123 @@
-body {
-  margin: 0 auto;
-  background-color: aqua;
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+:root {
+  --palegreen: rgba(152, 251, 152, 0.4);
 }
 
+body {
+  height: 98%;
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.5rem; }
+p { font-size: 1.5rem; }
+code {font-size: 1.5rem; }
+button { font-size: 1.25rem; }
+
+h1, h2, h3, h4, p, button {
+  font-family: helvetica, tahoma, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: .25rem;
+  background-color: none;
+}
+/* Button styles. ---------------------------------------- */
+ button {
+   background-color: black;
+   color: white;
+   border-radius: 8px;
+ }
+ button:hover {
+   background-color: white;
+   color: black;
+   cursor: pointer;
+ }
+ /* The header container. ---------------------------------- */
+ .header {
+   width: 100%;
+   background-color: var(--palegreen);
+   border-bottom: .25rem solid black;
+   padding-bottom: .25rem;
+ }
+ .header h1 {
+   text-shadow: 0 0.15rem white, 0.15rem 0 white, 0 -0.15rem white, -0.15rem 0 white;
+ }
+ /* The main container. ------------------------------------- */
+ .main {
+   width: 80%;
+   height: 70vh;
+   overflow-y: scroll;
+   margin: 1rem auto 0;
+   /* margin-top: 1rem; */
+   background-color: var(--palegreen);
+   border: .25rem solid black;
+   border-radius: 10px;
+ }
+ .main * {
+   margin: 1rem auto;
+ }
+ /* Markdown individual points container. --------------------- */
+.mkTopicCont {
+  width: 90%;
+  border: .15rem solid black;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mkTopicCont * {
+  margin: .4rem auto;
+}
+.codeCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.codeCont code {
+  width: 100%;
+}
+code {
+  padding: 0.25rem 0.5rem;
+}
+.outcomeImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outcomeImage img {
+  width: 100%
+}
+/* The hide class. ---------------------------------------------*/
+.hide {
+  display: none;
+}
+/* Media queries.----------------------------------------------- */
+@media screen and (max-width: 850px){
+  .main { width: 90%; }
+}
+@media screen and (max-width: 650px){
+  html { font-size: 12px; }
+
+  .main *, .mkTopicCont *  {
+    border-radius: 8px;
+  }
+  button { border-radius: 6px; }
+}
+@media screen and (max-width: 550px){
+  .main { width: 96%; }
+}
+@media screen and (max-width: 450px){
+  html { font-size: 10px; }
+}
