@@ -1,12 +1,12 @@
 import React from "react";
-import InfoContainer from "./InfoContainer";
+import ItemContainer from "./ItemContainer";
 
 const Main = (props) => {
   return (
     <main className="main">
       {props.markdownInfo.map((item) => {
         return (
-          <InfoContainer
+          <ItemContainer
             key={item.id}
             h3Title={item.h3Title}
             code={item.code}

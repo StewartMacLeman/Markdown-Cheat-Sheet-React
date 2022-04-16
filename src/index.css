@@ -80,15 +80,19 @@ h1, h2, h3, h4, p, button {
 .mkTopicCont * {
   margin: .4rem auto;
 }
-.codeCont {
+.codeContOne {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: flex-start; */
 }
-/* .codeCont code {
+.codeContTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.codeContTwo code {
   width: 100%;
-} */
+}
 code {
   padding: 0.25rem 0.5rem;
 }
